@@ -1,0 +1,206 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Courier New', Courier, monospace;
+  background-color: #1e1f21;
+  color: white;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 100vh;
+}
+
+main {
+    flex: 1;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1e1f21;
+  padding: 20px;
+}
+
+.logo {
+  background-color: #5865f2;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+  font-weight: bold;
+}
+
+.account {
+  display: flex;
+  align-items: center;
+}
+
+.profile-circle {
+  width: 35px;
+  height: 35px;
+  background-color: lightgray;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.account-btn {
+  background-color: #3b4af2;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 15px;
+  font-family: monospace;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 40px;
+}
+
+.card {
+  background-color: #3a3c51;
+  border: 2px solid #323342;
+  background-color: transparent;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  align-self: start;
+  position: relative;
+  padding-bottom: 20px;
+}
+
+.card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  border-color: #2e2f3f;
+}
+
+
+.card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+.card img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.card-name p {
+  font-weight: bold;
+  color: white;
+  margin: 0;
+}
+
+.icons {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.favorite-icon {
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.favorite-icon.favorited {
+  color: #facc15;
+}
+
+.info-icon {
+  color: #ccc;
+  cursor: default;
+}
+
+.details {
+  padding: 0 20px;
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease, opacity 0.5s ease;
+}
+
+.card:hover .details {
+  opacity: 1;
+  max-height: 500px;
+  margin-top: 10px;
+}
+
+footer {
+  text-align: right;
+  padding: 20px;
+  font-size: 0.8em;
+}
+
+footer a {
+  color: white;
+  margin-left: 10px;
+  text-decoration: none;
+}
+
+.account-menu {
+  position: relative;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.menu-icon {
+  font-size: 24px;
+  color: white;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 40px;
+  background-color: #222;
+  border: 1px solid #555;
+  border-radius: 8px;
+  padding: 10px;
+  flex-direction: column;
+  z-index: 1000;
+}
+
+.dropdown-menu a {
+  color: white;
+  text-decoration: none;
+  padding: 8px 12px;
+  display: block;
+  transition: background 0.2s;
+}
+
+.dropdown-menu a:hover {
+  background-color: #444;
+}
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr); 
+  }
+}
+
+@media (max-width: 480px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

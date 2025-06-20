@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Candidate Dashboard</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <div class="logo">ONE VOTE ONE FUTURE</div>
+            <nav>
+            <a href="#">HOME</a>
+            <a href="#">CANDIDATES</a>
+            <a href="#">AWARENESS</a>
+            <a href="#">REPORT</a>
+            <a href="#">FORUM</a>
+            </nav>
+            <div class="account-menu">
+                <i class="fas fa-bars menu-icon"></i>
+                <div class="dropdown-menu">
+                    <a href="#">Favorites</a>
+                    <a href="#">Settings</a>
+                    <a href="#">My Account</a>
+                    <a href="#">Log Out</a>
+                </div>
+             </div>
+
+        </header>
+
+        <main>
+            <div class="grid">
+            <div class="card">
+                <div class="card-header">
+                <img src="https://www.rappler.com/tachyon/2025/01/MENDOZA-HEIDI.jpg?fit=300%2C300" alt="Heidi Mendoza">
+                <div class="card-name"><p>Heidi Mendoza</p></div>
+                <div class="icons">
+                    <i class="fas fa-star favorite-icon" title="Favorite"></i>
+                    <i class="fas fa-info-circle info-icon" title="Source: Rappler.com"></i>
+                </div>
+                </div>
+                <div class="details">
+                <p><strong>Background:</strong> Former COA Commissioner and UN official known for transparency and accountability advocacy.</p>
+                <p><strong>Platform:</strong> Anti-corruption, fiscal transparency, good governance.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                <img src="https://www.rappler.com/tachyon/2025/01/AQUINO-BAM.jpg?fit=300%2C300" alt="Bam Aquino">          
+                <div class="card-name"><p>Bam Aquino</p></div>
+                <div class="icons">
+                    <i class="fas fa-star favorite-icon" title="Favorite"></i>
+                    <i class="fas fa-info-circle info-icon" title="Source: Rappler.com"></i>
+                </div>
+                </div>
+                <div class="details">
+                <p><strong>Background:</strong> Former senator and youth advocate.</p>
+                <p><strong>Platform:</strong> Education reform, tech innovation, youth employment.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                <img src="https://www.rappler.com/tachyon/2025/01/ESPIRITU-LUKE.jpg?fit=300%2C300" alt="Luke Espiritu">
+                <div class="card-name"><p>Luke Espiritu</p></div>
+                <div class="icons">
+                    <i class="fas fa-star favorite-icon" title="Favorite"></i>
+                    <i class="fas fa-info-circle info-icon" title="Source: Rappler.com"></i>
+                </div>
+                </div>
+                <div class="details">
+                <p><strong>Background:</strong> Labor rights lawyer and activist.</p>
+                <p><strong>Platform:</strong> Workers' rights, anti-oligarchy, grassroots empowerment.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Senkikopangilinan.jpg/640px-Senkikopangilinan.jpg" alt="Kiko Pangilinan">          
+                <div class="card-name"><p>Kiko Pangilinan</p></div>
+                <div class="icons">
+                    <i class="fas fa-star favorite-icon" title="Favorite"></i>
+                    <i class="fas fa-info-circle info-icon" title="Source: Rappler.com"></i>
+                </div>
+                </div>
+                <div class="details">
+                <p><strong>Background:</strong> Former senator and food security advocate.</p>
+                <p><strong>Platform:</strong> Agriculture, farmers' rights, food self-sufficiency.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                <img src="https://pdplaban.org.ph/wp-content/uploads/2024/01/Bato-Dela-Rosa.webp" alt="Bato Dela Rosa">          
+                <div class="card-name"><p>Bato Dela Rosa</p></div>
+                <div class="icons">
+                    <i class="fas fa-star favorite-icon" title="Favorite"></i>
+                    <i class="fas fa-info-circle info-icon" title="Source: Rappler.com"></i>
+                </div>
+                </div>
+                <div class="details">
+                <p><strong>Background:</strong> Former PNP Chief and senator.</p>
+                <p><strong>Platform:</strong> Law enforcement, anti-crime, drug prevention.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                <img src="https://pdplaban.org.ph/wp-content/uploads/2024/01/Bong-Go.webp" alt="Bong Go">          
+                <div class="card-name"><p>Bong Go</p></div>
+                <div class="icons">
+                    <i class="fas fa-star favorite-icon" title="Favorite"></i>
+                    <i class="fas fa-info-circle info-icon" title="Source: Rappler.com"></i>
+                </div>
+                </div>
+                <div class="details">
+                <p><strong>Background:</strong> Senator and close aide of President Duterte.</p>
+                <p><strong>Platform:</strong> Health services, housing, disaster response.</p>
+                </div>
+            </div>
+
+
+            <!-- Repeat similar structure for other candidates here -->
+
+            </div>
+        </main>
+
+        <footer>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms & Conditions</a>
+        </footer>
+    </div>
+        <script> // JavaScript for interactivity
+            document.querySelectorAll('.favorite-icon').forEach(icon => {
+            icon.addEventListener('click', () => {
+                icon.classList.toggle('favorited');
+            });
+            });
+
+            const menuIcon = document.querySelector('.menu-icon');
+            const dropdown = document.querySelector('.dropdown-menu');
+
+            menuIcon.addEventListener('click', () => {
+            dropdown.style.display = dropdown.style.display === 'flex' ? 'none' : 'flex';
+            });
+
+            document.addEventListener('click', (e) => {
+            if (!e.target.closest('.account-menu')) {
+            dropdown.style.display = 'none';
+            }
+     });
+        </script>
+    </body>
+</html>
